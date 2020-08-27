@@ -1,0 +1,30 @@
+<form [formGroup]="formulario">
+  <div>
+
+    <label>
+      Title:
+    </label>
+    <br>
+    <input id="title" type="text" formControlName="title" required>
+  </div>
+
+  <div style="flex:1">
+    <label>
+      Name:
+    </label>
+    <br>
+    <input id="name" type="text" formControlName="name" required>
+  </div>
+
+
+  <div style="flex:1">
+    <label>
+      Description:
+      <br>
+      <input id="description" formControlName="description" />
+    </label>
+  </div>
+
+  
+  <button type="button" (click)="onClick()" [disabled]="!formulario.valid">Enviar</button>
+</form>

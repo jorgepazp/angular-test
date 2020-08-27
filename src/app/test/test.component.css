@@ -1,0 +1,20 @@
+button{
+    padding: 15px;
+    border: none;
+    background: rgb(226, 226, 226);
+    color:rgb(32, 32, 32);
+    font-size: medium;
+    transition: all 0.2s ease-in-out;;
+  }
+
+  button:hover{
+      background-color: #4799ec;
+      color:white
+  }
+
+.active{
+    background-color: #1976d2;
+    color:white;
+    font-weight: bolder;
+}
+

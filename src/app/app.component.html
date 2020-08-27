@@ -1,0 +1,121 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+ .toolbar>span{
+   padding:10px
+ }
+ .navigation{
+   margin-right:50px
+ }
+
+ .navigation>button{
+   padding:10px;
+   margin:5px;
+ }
+
+button{
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  font-size: medium;
+  transition: all 0.3s ease-in-out;;
+}
+button:hover{
+  border-radius: 25px;
+  background-color:#4fa2f5
+}
+
+.active-button{
+  border-radius: 25px;
+  background:white !important;
+  color:black
+}
+
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+ 
+  <span>Welcome to {{title}}</span>
+    <div class="spacer"></div>
+    <div class="navigation">
+      <button routerLink="/" routerLinkActive="active-button" [routerLinkActiveOptions]="{exact:
+        true}"> Home</button>
+      <button routerLink="/test"  routerLinkActive="active-button"> Lazy Load Test</button>
+    </div>
+      
+    
+</div>
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+<router-outlet></router-outlet>
+</div>
